@@ -6,8 +6,11 @@ from itertools import product, permutations
 # I could probably write a script to generate these and generalize to
 # more than 4 numbers, but it seems a little overkill for this purpose
 
-def all_ten(a, b, c, d):
+def all_ten(a: int, b: int, c: int, d: int) -> dict[set[str]]:
     """All-ten solver, brute force"""
+    for i in a, b, c, d:
+        if not (isinstance(i, int) and 1 <= i <= 9):
+            raise ValueError("Invalid input to all_ten.")
     expressions = (
             # These are the 5 ways to completely determine order of 3 binary
             # operations
@@ -48,7 +51,7 @@ def all_ten(a, b, c, d):
                         val = eval(''.join(e)) # Where the magic happens
                     except ZeroDivisionError:
                         continue
-                    if is_int(val) and 1 <= val <= 10:
+                    if val // 1 == val and 1 <= val <= 10:
                         # If we get a number from 1 - 10
                         results[val].add(''.join(e))
     return results
