@@ -12,3 +12,14 @@ concatenation cannot be used in intermediate calculations, you can only
 concatenate the original digits together.
 
 You can play the game [here](https://beastacademy.com/all-ten).
+
+## All Ten Solver
+If you don't want to think anymore, you can use this script to find all possible
+answers for All Ten. To use, you can either run
+```
+python solve.py
+```
+and enter 4 digits, or you can pass them as arguments like so:
+```
+python solve.py 4 4 4 4
+```
