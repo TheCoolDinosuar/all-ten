@@ -23,3 +23,8 @@ and enter 4 digits, or you can pass them as arguments like so:
 ```
 python solve.py 4 4 4 4
 ```
+Alternatively, if you want to get some random solutions for today's All Ten, you
+can use
+```
+python solve_today.py
+```
